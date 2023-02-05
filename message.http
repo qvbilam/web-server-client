@@ -1,0 +1,74 @@
+### 私聊自定义
+POST {{messageHost}}/message/private/publish
+Content-Type: application/json
+Authorization: 1
+
+{
+  "user_id": 2,
+  "content_type": "TextMsg",
+  "content": "",
+  "url": "",
+  "extra": "",
+  "code": 6666
+}
+
+### 私聊文本
+POST {{messageHost}}/message/private/publish/txt
+Content-Type: application/json
+Authorization: 1
+
+{
+  "user_id": 2,
+  "content": "你好啊，小呆瓜",
+  "extra": ""
+}
+
+### 私聊图片
+POST {{messageHost}}/message/private/publish/img
+Content-Type: application/json
+Authorization: 1
+
+{
+  "user_id": 2,
+  "content": "缩略图",
+  "url": "图片地址",
+  "extra": ""
+}
+
+### 群聊自定义
+POST {{messageHost}}/message/group/publish
+Content-Type: application/json
+Authorization: 1
+
+{
+  "group_id": 1,
+  "content_type": "TextMsg",
+  "content": "",
+  "url": "",
+  "extra": "",
+  "code": 6666
+}
+
+### 群聊文本
+POST {{messageHost}}/message/group/publish/txt
+Content-Type: application/json
+Authorization: 1
+
+{
+  "group_id": 1,
+  "content": "hello",
+  "url": "",
+  "extra": ""
+}
+
+### 群聊图片
+POST {{messageHost}}/message/group/publish/img
+Content-Type: application/json
+Authorization: 1
+
+{
+  "group_id": 1,
+  "content": "缩略图",
+  "url": "图片地址",
+  "extra": ""
+}
