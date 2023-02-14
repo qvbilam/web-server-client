@@ -1,0 +1,22 @@
+### 支付宝h5
+POST {{payHost}}/pay/alipay/web
+Content-Type: application/json
+Authorization: 1
+
+{
+  "delivery_id": 0,
+  "goods_type": "test",
+  "goods_id": 1,
+  "count": 1,
+  "remark": "测试"
+}
+
+
+### 测试支付宝回调
+POST {{payHost}}/pay/alipay/notify
+Content-Type: application/json
+Authorization: 1
+
+{
+  "name": 123
+}

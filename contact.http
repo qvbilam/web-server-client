@@ -15,7 +15,7 @@ Authorization: 1
 ### 创建私聊会话
 POST {{contactHost}}/conversation
 Content-Type: application/json
-Authorization: 1
+Authorization:
 
 {
   "type": "user",

@@ -15,23 +15,23 @@ Authorization: 1
 ### 私聊文本
 POST {{messageHost}}/message/private/publish/txt
 Content-Type: application/json
-Authorization: 1
+Authorization: 2
 
 {
-  "user_id": 2,
-  "content": "你好啊，小呆瓜",
+  "user_id": 1,
+  "content": "套你猴子",
   "extra": ""
 }
 
 ### 私聊图片
 POST {{messageHost}}/message/private/publish/img
 Content-Type: application/json
-Authorization: 1
+Authorization: 2
 
 {
-  "user_id": 2,
-  "content": "缩略图",
-  "url": "图片地址",
+  "user_id": 1,
+  "content": "https://qvbilam.oss-cn-hangzhou.aliyuncs.com/user-images/noface.gif?x-oss-process=image/resize,m_fill,h_100,w_200",
+  "url": "https://qvbilam.oss-cn-hangzhou.aliyuncs.com/user-images/noface.gif",
   "extra": ""
 }
 
@@ -52,7 +52,7 @@ Authorization: 1
 ### 群聊文本
 POST {{messageHost}}/message/group/publish/txt
 Content-Type: application/json
-Authorization: 1
+Authorization: 2
 
 {
   "group_id": 1,
@@ -72,3 +72,11 @@ Authorization: 1
   "url": "图片地址",
   "extra": ""
 }
+
+### 私聊聊天记录
+GET {{messageHost}}/message/private/2?page=1&per_page=10
+Authorization: 1
+
+### 群聊聊天记录
+GET {{messageHost}}/message/group/1?page=1&per_page=10
+Authorization: 1
