@@ -1,0 +1,29 @@
+### 用户注册
+POST {{userHost}}/account/register
+Content-Type: application/json
+
+{
+  "mobile": "13501294164",
+  "password": "123456"
+}
+
+### 用户登陆
+POST {{userHost}}/account/login
+Content-Type: application/json
+
+{
+  "mobile": "13501294164",
+  "password": "123456",
+  "method": "mobile"
+}
+
+> {% client.global.set("token", response.body.data.token) %}
+
+### 获取用户详情
+GET {{userHost}}/user/1
+Authorization: Bearer {{token}}
+
+
+### 搜索用户
+GET {{userHost}}/user/search?keyword=fate
+Authorization: Bearer {{token}}
