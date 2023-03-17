@@ -6,7 +6,7 @@ Authorization: 1
 {
   "user_id": 2,
   "content_type": "TextMsg",
-  "content": "",
+  "content": "你好",
   "url": "",
   "extra": "",
   "code": 6666
