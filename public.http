@@ -1,0 +1,44 @@
+### 发送短信
+POST {{publicHost}}/public/sms/send
+Content-Type: application/json
+
+{
+  "mobile": "13501294164",
+  "type": "login"
+}
+
+### 验证短信
+POST {{publicHost}}/public/sms/check
+Content-Type: application/json
+
+{
+  "mobile": "13501294164",
+  "type": "login",
+  "code": "8635"
+}
+
+### 获取oss-sts-token
+GET {{publicHost}}/public/oss/token?file_sha1=文件sha1
+
+
+### 创建上传视频凭证
+POST {{publicHost}}/public/video/upload/certificate
+Content-Type: application/json
+
+{
+  "file_name": "文件名",
+  "file_sha1": "文件sha1",
+  "file_type": "文件类型"
+}
+
+### 刷新上传视频凭证
+PUT {{publicHost}}/public/video/upload/certificate
+Content-Type: application/json
+
+{
+  "business_id": 1
+}
+
+### 获取视频播放凭证
+GET {{publicHost}}/public/video/{id}/play/certificate?id=1
+Content-Type: application/json
