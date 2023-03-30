@@ -7,7 +7,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-### 用户登陆
+### 用户登陆(密码)
 POST {{userHost}}/account/login
 Content-Type: application/json
 
@@ -18,6 +18,16 @@ Content-Type: application/json
 }
 
 > {% client.global.set("token", response.body.data.token) %}
+
+### 用户登陆(验证码)
+POST {{userHost}}/account/login
+Content-Type: application/json
+
+{
+  "mobile": "13630877991",
+  "code": "1234",
+  "method": "sms"
+}
 
 ### 获取用户详情
 GET {{userHost}}/user/1

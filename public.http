@@ -3,7 +3,7 @@ POST {{publicHost}}/public/sms/send
 Content-Type: application/json
 
 {
-  "mobile": "13501294164",
+  "mobile": "111",
   "type": "login"
 }
 
