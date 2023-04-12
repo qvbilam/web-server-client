@@ -1,34 +1,3 @@
-### 用户注册
-POST {{userHost}}/account/register
-Content-Type: application/json
-
-{
-  "mobile": "13501294112",
-  "password": "123456"
-}
-
-### 用户登陆(密码)
-POST {{userHost}}/account/login
-Content-Type: application/json
-
-{
-  "mobile": "13501294164",
-  "password": "123456",
-  "method": "mobile"
-}
-
-> {% client.global.set("token", response.body.data.token) %}
-
-### 用户登陆(验证码)
-POST {{userHost}}/account/login
-Content-Type: application/json
-
-{
-  "mobile": "13630877991",
-  "code": "1234",
-  "method": "sms"
-}
-
 ### 获取用户详情
 GET {{userHost}}/user/1
 Authorization: Bearer {{token}}

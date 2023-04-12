@@ -1,0 +1,84 @@
+### 用户注册
+POST {{userHost}}/account/register
+Content-Type: application/json
+
+{
+  "mobile": "13501294112",
+  "password": "123456"
+}
+
+### 用户登陆(密码)
+POST {{userHost}}/account/login
+Content-Type: application/json
+
+{
+  "mobile": "13501294164",
+  "password": "123456",
+  "method": "mobile"
+}
+
+> {% client.global.set("token", response.body.data.token) %}
+
+### 用户登陆(验证码)
+POST {{userHost}}/account/login
+Content-Type: application/json
+
+{
+  "mobile": "13630877991",
+  "code": "1234",
+  "method": "sms"
+}
+
+### 第三方登陆qq
+POST {{userHost}}/account/login/platform
+Content-Type: application/json
+
+{
+  "type": "qq",
+  "code": "F8658B78ACC642E537FF1CAE00166DBD"
+}
+
+### 第三方登陆github
+POST {{userHost}}/account/login/platform
+Content-Type: application/json
+
+{
+  "type": "github",
+  "code": "b09f136fe61ef80f4155"
+}
+
+### 修改账号
+POST {{userHost}}/account/update
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "username": "534511019"
+}
+
+### 修改邮箱
+POST {{userHost}}/account/update
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "email": "534511019@qq.com"
+}
+
+### 修改手机号
+POST {{userHost}}/account/update
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "mobile": "13111111111"
+}
+
+### 修改密码
+POST {{userHost}}/account/update
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "password": "123456"
+}
