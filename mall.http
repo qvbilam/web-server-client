@@ -1,0 +1,11 @@
+### 商品分类
+GET {{mallHost}}/mall/category
+Authorization: Bearer {{token}}
+
+### 商品列表(金币)
+GET {{mallHost}}/mall/goods?category_id=1
+Authorization: Bearer {{token}}
+
+### 商品列表(月卡)
+GET {{mallHost}}/mall/goods?category_id=2
+Authorization: Bearer {{token}}
