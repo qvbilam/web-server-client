@@ -4,19 +4,36 @@ Content-Type: application/json
 Authorization: 1
 
 {
-  "delivery_id": 0,
-  "goods_type": "test",
-  "goods_id": 1,
-  "count": 1,
-  "remark": "测试"
+  "order_sn": "202310181625132012000054"
 }
 
 
 ### 测试支付宝回调
 POST {{payHost}}/pay/alipay/notify
 Content-Type: application/json
-Authorization: 1
 
 {
-  "name": 123
+  "app_id":"9021000129665438",
+  "auth_app_id":"9021000129665438",
+  "buyer_id":"2088722017690350",
+  "buyer_pay_amount":"6.00",
+  "charset":"utf-8",
+  "fund_bill_list":"[{\"amount\":\"6.00\",\"fundChannel\":\"ALIPAYACCOUNT\"}]",
+  "gmt_create":"2023-10-18 16:25:36",
+  "gmt_payment":"2023-10-18 16:25:42",
+  "invoice_amount":"6.00",
+  "notify_id":"2023101801222162543090350501162661",
+  "notify_time":"2023-10-18 16:25:44",
+  "notify_type":"trade_status_sync",
+  "out_trade_no":"202310181625132012000054",
+  "point_amount":"0.00",
+  "receipt_amount":"6.00",
+  "seller_id":"2088721017679811",
+  "sign":"l9yRub4CjVDeWf46xe6IwCZzH2rhPN6zPGstY0A9d3kxIvPDePcca2b67lEAGBoWjQCsXs6KZi8sTBbJr6aQDwwndAzmL2OvLrjRFlkr5w6kICTMg8fe5RVIHR/BiyQMJhi2FdWqvw2CxGSyvOACA1yAbF4x7uISYPAJVZph2Oc4ESgHwAa65oEHapNyUtl158UAZeZM5WAD1bgNeIR0MBIwnt8inYRL2Z57Ho9DVSVqpp1l+EOwc8JVy6lcL5NW8RHrhvNGLr/+KB3D1gkfeZ1R2Sn2u70Qukj+LPjV2/2+/jBHyjMgVG5vkiWkjZgIpAoJvfIrV9iri2IBvlwgyA==",
+  "sign_type":"RSA2",
+  "subject":"购买【6元金币】",
+  "total_amount":"6.00",
+  "trade_no":"2023101822001490350501117531",
+  "trade_status":"TRADE_SUCCESS",
+  "version":"1.0"
 }

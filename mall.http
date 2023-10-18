@@ -9,3 +9,12 @@ Authorization: Bearer {{token}}
 ### 商品列表(月卡)
 GET {{mallHost}}/mall/goods?category_id=2
 Authorization: Bearer {{token}}
+
+### 商品购买
+POST {{mallHost}}/mall/buy/goods/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "count": 1
+}
