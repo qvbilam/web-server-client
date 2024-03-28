@@ -3,7 +3,7 @@ POST {{userHost}}/account/register
 Content-Type: application/json
 
 {
-  "mobile": "13501294170",
+  "mobile": "13501294173",
   "password": "123456"
 }
 
@@ -12,7 +12,7 @@ POST {{userHost}}/account/login
 Content-Type: application/json
 
 {
-  "mobile": "13501294164",
+  "mobile": "13501294171",
   "password": "123456",
   "method": "mobile"
 }
